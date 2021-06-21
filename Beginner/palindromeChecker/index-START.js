@@ -7,9 +7,32 @@ e.g palindromeChecker('racecar') // will return true
 
 
 function palindromeChecker(text) {
-    v// Code goes here
+    let reverseText = text.toLowerCase().split('').reverse().join('')
+    return text === reverseText
+
+
+-------------------------------
+
+    let charArray = text.toLowerCase.split('')
+    let result = charArray.every((letter, index) => {
+        return letter === charArray[charArray.length - index - 1]
+        
+    })
+    return result
+
+// ------------------------------------------------- not optimized
+
+let textLen = text.length
+for (let i = 0; textLen/2; i++){
+if(text[i] !== text[textLen - 1 - i]){
+    return false
 }
+} return true
+
+// --------------------------------------------- optimized with middle stoppoing point 
 
 
 
+
+}
 module.exports = palindromeChecker;
